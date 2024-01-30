@@ -4,6 +4,7 @@ export const RECIPES: Recipe[] = [
   {
     id: '1',
     name: 'Sandwich Mozarella 1',
+    category: 'Breakfast',
     image:
       'https://www.thecandidcooks.com/wp-content/uploads/2022/08/prosciutto-mozzarella-sandwich-horiz2.jpg',
     ingredients: [
@@ -53,6 +54,7 @@ export const RECIPES: Recipe[] = [
   {
     id: '2',
     name: 'Sandwich Mozarella 2',
+    category: 'Breakfast',
     image:
       'https://www.thecandidcooks.com/wp-content/uploads/2022/08/prosciutto-mozzarella-sandwich-horiz2.jpg',
     ingredients: [
@@ -102,6 +104,7 @@ export const RECIPES: Recipe[] = [
   {
     id: '3',
     name: 'Sandwich Mozarella 3',
+    category: 'Breakfast',
     image:
       'https://www.thecandidcooks.com/wp-content/uploads/2022/08/prosciutto-mozzarella-sandwich-horiz2.jpg',
     ingredients: [
