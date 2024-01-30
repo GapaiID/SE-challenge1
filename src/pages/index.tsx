@@ -1,4 +1,4 @@
-import { PhoneIcon } from '@chakra-ui/icons';
+import { Search2Icon } from '@chakra-ui/icons';
 import {
   Box,
   Flex,
@@ -22,7 +22,7 @@ const Index = () => {
       <Stack width={'70%'} mx={'auto'} my={5} gap={5}>
         <InputGroup>
           <InputLeftElement pointerEvents="none">
-            <PhoneIcon color="gray.300" />
+            <Search2Icon color="gray.300" />
           </InputLeftElement>
           <Input placeholder="Search recipe name/ingredients" />
         </InputGroup>
