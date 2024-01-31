@@ -1,13 +1,11 @@
+import { Ingredient } from "./ingredient";
+
 export interface Recipe {
   id?: string;
   name: string;
   image: string;
   category: string;
-  ingredients: {
-    name: string;
-    amount: number;
-    unit: string;
-  }[];
+  ingredients: Ingredient[];
   steps: string[];
   cookingTime: {
     amount: number;
