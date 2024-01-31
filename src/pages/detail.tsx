@@ -2,7 +2,7 @@ import { Button, IconButton } from '@chakra-ui/button';
 import { AddIcon, MinusIcon } from '@chakra-ui/icons';
 import { Image } from '@chakra-ui/image';
 import { Heading, ListItem, OrderedList, Stack, Text } from '@chakra-ui/layout';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { RECIPES } from '../constants/recipes';
@@ -11,8 +11,11 @@ const Detail = () => {
   const { id } = useParams();
   const recipe = RECIPES.find((r) => r.id === id);
   const [servings, setServings] = useState(recipe?.servings as number);
-  // TODO: useReducer
-  // const [cart, dispatch] = useReducer(reducer, initialCart);
+  const [cart, setCart] = useState<string[]>([]);
+
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
 
   if (!recipe) {
     return (
@@ -70,12 +73,20 @@ const Detail = () => {
                 {ingredient.name} ({ingredient.amount * servings}{' '}
                 {ingredient.unit})
                 <IconButton
-                  icon={<AddIcon />}
+                  icon={
+                    cart.includes(ingredient.name) ? <MinusIcon /> : <AddIcon />
+                  }
                   aria-label={`add ${ingredient.name} to cart`}
                   size="xs"
                   ml={2}
                   variant={'ghost'}
-                  onClick={() => {}}
+                  onClick={() => {
+                    if (cart.includes(ingredient.name)) {
+                      setCart(cart.filter((item) => item !== ingredient.name));
+                      return;
+                    }
+                    setCart([...cart, ingredient.name]);
+                  }}
                 />
               </ListItem>
             ))}
