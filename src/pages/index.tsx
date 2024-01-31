@@ -108,7 +108,7 @@ const Index = () => {
         {recipes.map((recipe) => (
           <Link to={`/detail/${recipe.id}`}>
             <Stack
-              direction="row"
+              direction={{ base: 'column-reverse', lg: 'row' }}
               key={recipe.id}
               justifyContent={'space-between'}
               gap={2}
@@ -133,7 +133,11 @@ const Index = () => {
                   ))}
                 </Text>
               </Box>
-              <Image src={recipe.image} alt={recipe.name} width="20vw" />
+              <Image
+                src={recipe.image}
+                alt={recipe.name}
+                width={{ lg: '20vw' }}
+              />
             </Stack>
           </Link>
         ))}

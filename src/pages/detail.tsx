@@ -17,7 +17,7 @@ const Detail = () => {
   if (!recipe) {
     return (
       <Stack justifyContent={'center'} alignItems={'center'} height="90vh">
-        <Stack width="50%" mx="auto">
+        <Stack width={{ lg: '50%' }} mx="auto">
           <Heading textAlign="center">Recipe not found</Heading>
           <Button as={Link} to={'/'}>
             Back to home
@@ -55,7 +55,11 @@ const Detail = () => {
             />
           </Stack>
         </Stack>
-        <Image src={recipe.image} alt={recipe.name} width="50vw" />
+        <Image
+          src={recipe.image}
+          alt={recipe.name}
+          width={{ base: '80vw', lg: '50vw' }}
+        />
 
         {/* ingredients */}
         <Stack>
