@@ -28,6 +28,23 @@ const Index = () => {
     }
   }, [filter]);
 
+  useEffect(() => {
+    if (search == '') {
+      setRecipes(RECIPES);
+    } else {
+      setRecipes(
+        RECIPES.filter((recipe) =>
+          recipe.name.toLowerCase().includes(search.toLowerCase()) ||
+          recipe.ingredients.some((ingredient) =>
+            ingredient.name.toLowerCase().includes(search.toLowerCase())
+          )
+            ? true
+            : false
+        )
+      );
+    }
+  }, [search]);
+
   return (
     <Stack justifyContent={'center'}>
       <Heading my={3} textAlign={'center'}>
@@ -40,7 +57,10 @@ const Index = () => {
             <Search2Icon color="gray.300" />
           </InputLeftElement>
           {/* TODO: add functionality */}
-          <Input placeholder="Search recipe name/ingredients" />
+          <Input
+            placeholder="Search recipe name/ingredients"
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </InputGroup>
 
         <Stack direction="row" gap={2} alignItems="center">
@@ -49,7 +69,7 @@ const Index = () => {
             onClick={() => {
               filter == '' ? setFilter('Breakfast') : setFilter('');
             }}
-            colorScheme={ filter == 'Breakfast' ? 'orange' : 'gray'}
+            colorScheme={filter == 'Breakfast' ? 'orange' : 'gray'}
           >
             Breakfast
           </Button>
@@ -57,7 +77,7 @@ const Index = () => {
             onClick={() => {
               filter == '' ? setFilter('Lunch') : setFilter('');
             }}
-            colorScheme={ filter == 'Lunch' ? 'orange' : 'gray'}
+            colorScheme={filter == 'Lunch' ? 'orange' : 'gray'}
           >
             Lunch
           </Button>
@@ -65,7 +85,7 @@ const Index = () => {
             onClick={() => {
               filter == '' ? setFilter('Dinner') : setFilter('');
             }}
-            colorScheme={ filter == 'Dinner' ? 'orange' : 'gray'}
+            colorScheme={filter == 'Dinner' ? 'orange' : 'gray'}
           >
             Dinner
           </Button>
@@ -73,7 +93,7 @@ const Index = () => {
             onClick={() => {
               filter == '' ? setFilter('Dessert') : setFilter('');
             }}
-            colorScheme={ filter == 'Dessert' ? 'orange' : 'gray'}
+            colorScheme={filter == 'Dessert' ? 'orange' : 'gray'}
           >
             Dessert
           </Button>
