@@ -1,6 +1,7 @@
 import { Search2Icon } from '@chakra-ui/icons';
 import {
   Box,
+  Button,
   Heading,
   Image,
   Input,
@@ -10,9 +11,23 @@ import {
   Tag,
   Text,
 } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 import { RECIPES } from '../constants/recipes';
+import { Recipe } from '../types/recipe';
 
 const Index = () => {
+  const [filter, setFilter] = useState<string>('');
+  const [search, setSearch] = useState<string>('');
+  const [recipes, setRecipes] = useState<Recipe[]>(RECIPES);
+
+  useEffect(() => {
+    if (filter == '') {
+      setRecipes(RECIPES);
+    } else {
+      setRecipes(RECIPES.filter((recipe) => filter.includes(recipe.category)));
+    }
+  }, [filter]);
+
   return (
     <Stack justifyContent={'center'}>
       <Heading my={3} textAlign={'center'}>
@@ -30,14 +45,41 @@ const Index = () => {
 
         <Stack direction="row" gap={2} alignItems="center">
           <Text mr={3}>Filter: </Text>
-          {/* TODO: add functionality */}
-          <Tag size="lg">Breakfast</Tag>
-          <Tag size="lg">Lunch</Tag>
-          <Tag size="lg">Dinner</Tag>
-          <Tag size="lg">Dessert</Tag>
+          <Button
+            onClick={() => {
+              filter == '' ? setFilter('Breakfast') : setFilter('');
+            }}
+            colorScheme={ filter == 'Breakfast' ? 'orange' : 'gray'}
+          >
+            Breakfast
+          </Button>
+          <Button
+            onClick={() => {
+              filter == '' ? setFilter('Lunch') : setFilter('');
+            }}
+            colorScheme={ filter == 'Lunch' ? 'orange' : 'gray'}
+          >
+            Lunch
+          </Button>
+          <Button
+            onClick={() => {
+              filter == '' ? setFilter('Dinner') : setFilter('');
+            }}
+            colorScheme={ filter == 'Dinner' ? 'orange' : 'gray'}
+          >
+            Dinner
+          </Button>
+          <Button
+            onClick={() => {
+              filter == '' ? setFilter('Dessert') : setFilter('');
+            }}
+            colorScheme={ filter == 'Dessert' ? 'orange' : 'gray'}
+          >
+            Dessert
+          </Button>
         </Stack>
 
-        {RECIPES.map((recipe) => (
+        {recipes.map((recipe) => (
           <Stack
             direction="row"
             key={recipe.id}
