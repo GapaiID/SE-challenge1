@@ -12,6 +12,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { RECIPES } from '../constants/recipes';
 import { Recipe } from '../types/recipe';
 
@@ -100,33 +101,36 @@ const Index = () => {
         </Stack>
 
         {recipes.map((recipe) => (
-          <Stack
-            direction="row"
-            key={recipe.id}
-            justifyContent={'space-between'}
-            gap={2}
-          >
-            <Box>
-              <Heading as="h2" size="lg">
-                {recipe.name}
-              </Heading>
-              <Tag>{recipe.category}</Tag>
-              <Text>
-                Waktu memasak: {recipe.cookingTime.amount}{' '}
-                {recipe.cookingTime.unit}
-              </Text>
-              <Text>
-                Bahan:{' '}
-                {recipe.ingredients.map((ingredient, i) => (
-                  <span>
-                    {ingredient.name}
-                    {i < recipe.ingredients.length - 1 ? ', ' : ''}
-                  </span>
-                ))}
-              </Text>
-            </Box>
-            <Image src={recipe.image} alt={recipe.name} width="20vw" />
-          </Stack>
+          <Link to={`/detail/${recipe.id}`}>
+            <Stack
+              direction="row"
+              key={recipe.id}
+              justifyContent={'space-between'}
+              gap={2}
+              _hover={{ cursor: 'pointer', backgroundColor: 'gray.100' }}
+            >
+              <Box>
+                <Heading as="h2" size="lg">
+                  {recipe.name}
+                </Heading>
+                <Tag>{recipe.category}</Tag>
+                <Text>
+                  Waktu memasak: {recipe.cookingTime.amount}{' '}
+                  {recipe.cookingTime.unit}
+                </Text>
+                <Text>
+                  Bahan:{' '}
+                  {recipe.ingredients.map((ingredient, i) => (
+                    <span>
+                      {ingredient.name}
+                      {i < recipe.ingredients.length - 1 ? ', ' : ''}
+                    </span>
+                  ))}
+                </Text>
+              </Box>
+              <Image src={recipe.image} alt={recipe.name} width="20vw" />
+            </Stack>
+          </Link>
         ))}
       </Stack>
     </Stack>
