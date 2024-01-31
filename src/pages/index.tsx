@@ -22,6 +22,7 @@ const Index = () => {
   const [recipes, setRecipes] = useState<Recipe[]>(RECIPES);
 
   useEffect(() => {
+    // To filter by category
     if (filter == '') {
       setRecipes(RECIPES);
     } else {
@@ -30,6 +31,7 @@ const Index = () => {
   }, [filter]);
 
   useEffect(() => {
+    // To search by name or ingredients
     if (search == '') {
       setRecipes(RECIPES);
     } else {
@@ -53,6 +55,7 @@ const Index = () => {
       </Heading>
 
       <Stack width={'70%'} mx={'auto'} my={5} gap={5}>
+        {/* search input */}
         <InputGroup>
           <InputLeftElement pointerEvents="none">
             <Search2Icon color="gray.300" />
@@ -64,6 +67,7 @@ const Index = () => {
           />
         </InputGroup>
 
+        {/* filter */}
         <Stack direction="row" gap={2} alignItems="center">
           <Text mr={3}>Filter: </Text>
           <Button
@@ -100,6 +104,7 @@ const Index = () => {
           </Button>
         </Stack>
 
+        {/* recipe list */}
         {recipes.map((recipe) => (
           <Link to={`/detail/${recipe.id}`}>
             <Stack

@@ -34,6 +34,7 @@ const Detail = () => {
           <Text>
             {recipe.cookingTime.amount} {recipe.cookingTime.unit}
           </Text>
+          {/* servings increase-decrease */}
           <Stack direction="row">
             <IconButton
               icon={<MinusIcon />}
@@ -55,6 +56,8 @@ const Detail = () => {
           </Stack>
         </Stack>
         <Image src={recipe.image} alt={recipe.name} width="50vw" />
+
+        {/* ingredients */}
         <Stack>
           <Text>Bahan:</Text>
           <OrderedList>
@@ -74,6 +77,8 @@ const Detail = () => {
             ))}
           </OrderedList>
         </Stack>
+
+        {/* steps */}
         <Stack>
           <Text>Cara memasak:</Text>
           <OrderedList>
