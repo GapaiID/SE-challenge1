@@ -24,8 +24,18 @@ const Index = () => {
           <InputLeftElement pointerEvents="none">
             <Search2Icon color="gray.300" />
           </InputLeftElement>
+          {/* TODO: add functionality */}
           <Input placeholder="Search recipe name/ingredients" />
         </InputGroup>
+
+        <Stack direction="row" gap={2} alignItems="center">
+          <Text mr={3}>Filter: </Text>
+          {/* TODO: add functionality */}
+          <Tag size="lg">Breakfast</Tag>
+          <Tag size="lg">Lunch</Tag>
+          <Tag size="lg">Dinner</Tag>
+          <Tag size="lg">Dessert</Tag>
+        </Stack>
 
         {RECIPES.map((recipe) => (
           <Stack
