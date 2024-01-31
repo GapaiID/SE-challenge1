@@ -1,10 +1,10 @@
 # [SE - Submission] - Alifia Rahmah
 
 Author: Alifia Rahmah\
-Email: alifiarahmah@outlook.com\
-Phone: +6285156728757
+Email: [alifiarahmah@outlook.com](mailto:alifiarahmah@outlook.com)\
+Phone: [+6285156728757](tel:+6285156728757)
 
-Link to the deployed application: https://se-challenge1.vercel.app/
+Link to the deployed application: [https://se-challenge1.vercel.app/](https://se-challenge1.vercel.app/)
 
 ## Description
 
@@ -15,8 +15,8 @@ Users can also scale the recipe to their desired serving size and add the ingred
 
 ### Requirements
 
-1. Node.js
-2. yarn
+1. [Node.js](https://nodejs.org/en/download/)
+2. [yarn](https://classic.yarnpkg.com/en/docs/install)
 
 ### Installation
 
