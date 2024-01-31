@@ -1,13 +1,13 @@
 import { Search2Icon } from '@chakra-ui/icons';
 import {
   Box,
-  Flex,
   Heading,
   Image,
   Input,
   InputGroup,
   InputLeftElement,
   Stack,
+  Tag,
   Text,
 } from '@chakra-ui/react';
 import { RECIPES } from '../constants/recipes';
@@ -28,16 +28,21 @@ const Index = () => {
         </InputGroup>
 
         {RECIPES.map((recipe) => (
-          <Flex key={recipe.id} justifyContent={'space-between'}>
+          <Stack
+            direction="row"
+            key={recipe.id}
+            justifyContent={'space-between'}
+            gap={2}
+          >
             <Box>
               <Heading as="h2" size="lg">
                 {recipe.name}
               </Heading>
+              <Tag>{recipe.category}</Tag>
               <Text>
                 Waktu memasak: {recipe.cookingTime.amount}{' '}
                 {recipe.cookingTime.unit}
               </Text>
-              <Text>Porsi: {recipe.servings}</Text>
               <Text>
                 Bahan:{' '}
                 {recipe.ingredients.map((ingredient, i) => (
@@ -49,7 +54,7 @@ const Index = () => {
               </Text>
             </Box>
             <Image src={recipe.image} alt={recipe.name} width="20vw" />
-          </Flex>
+          </Stack>
         ))}
       </Stack>
     </Stack>
