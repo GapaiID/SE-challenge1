@@ -6,12 +6,10 @@ import SearchLogo from "./SearchLogo";
 
 export default function Navbar() {
   return (
-    <Flex>
+    <Flex position="sticky" top={0}>
       <HStack
         width="full"
         justifyContent="space-between"
-        position="sticky"
-        top={0}
         bg="white"
         paddingY="1rem"
         gap={"4rem"}
