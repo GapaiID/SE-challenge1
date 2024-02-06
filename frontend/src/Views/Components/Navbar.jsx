@@ -3,9 +3,18 @@ import { Flex, HStack } from "@chakra-ui/layout";
 import { Logo } from ".";
 import SearchBar from "./SearchBar";
 import NavButton from "./NavButton";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  const navigator = useNavigate();
+
+  const handleLogout = (e) => {
+    e.preventDefault();
+
+    localStorage.clear();
+
+    navigator("/auth");
+  };
   return (
     <Flex
       zIndex={10}
@@ -37,7 +46,7 @@ export default function Navbar() {
         </ButtonGroup>
         <Flex gap={"1rem"}>
           <SearchBar />
-          <div>swc</div>
+          <NavButton text="Logout" func={handleLogout} />
         </Flex>
       </HStack>
     </Flex>
