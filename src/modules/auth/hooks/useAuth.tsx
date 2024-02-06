@@ -8,18 +8,22 @@ export const useAuth = () => {
     setIsLoading(true);
 
     const access = localStorage.getItem('access');
-    if (!!access) {
-      setIsAuthenticated(true);
-    } else {
+    if (!access) {
       setIsAuthenticated(false);
+    } else {
+      setIsAuthenticated(true);
     }
 
     setIsLoading(false);
   };
 
+  const doLogout = () => {
+    localStorage.removeItem("access");
+  }
+
   useEffect(() => {
     doAuthCheck();
   }, []);
 
-  return { doAuthCheck, isAuthenticated, isLoading };
+  return { doAuthCheck, doLogout, isAuthenticated, isLoading };
 };

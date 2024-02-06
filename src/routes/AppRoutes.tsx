@@ -45,6 +45,10 @@ const AppRoutes = () => {
                 path={authRoutes.REGISTER_PAGE}
                 element={<authPages.RegisterPage />}
               />
+              <Route
+                  path={authRoutes.LOGOUT_PAGE}
+                  element={<authPages.LogoutPage />}
+              />
 
               {/* Dashboard */}
               <Route
@@ -85,6 +89,22 @@ const AppRoutes = () => {
               <Route
                 path={blogRoutes.BLOG_LIST_PAGE}
                 element={<blogPages.BlogDetailPage />}
+              />
+              <Route
+                  path={blogRoutes.BLOG_CREATE_PAGE}
+                  element={
+                    <AuthRoute>
+                      <blogPages.BlogCreatePage/>
+                    </AuthRoute>
+                  }
+              />
+              <Route
+                  path={blogRoutes.BLOG_UPDATE_PAGE}
+                  element={
+                    <AuthRoute>
+                      <blogPages.BlogUpdatePage />
+                    </AuthRoute>
+                  }
               />
 
               {/* User */}

@@ -5,6 +5,7 @@ import {
   DASHBOARD_PASSWORD_PAGE,
 } from '@modules/dashboard/routes';
 import React from 'react';
+import { LOGOUT_PAGE } from "@modules/auth/routes";
 
 export const SideMenu = () => {
   return (
@@ -20,7 +21,7 @@ export const SideMenu = () => {
           <NavLink to={DASHBOARD_PASSWORD_PAGE}>Edit Password</NavLink>
         </li>
         <li>
-          <NavLink to={DASHBOARD_PAGE}>Dashboard</NavLink>
+          <NavLink to={LOGOUT_PAGE}>Logout</NavLink>
         </li>
       </ul>
     </div>

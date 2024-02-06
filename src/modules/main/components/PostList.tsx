@@ -1,12 +1,11 @@
 import { PostListItem } from './PostListItem';
 
-export const PostList = () => {
+export const PostList = ({ posts }: any) => {
   return (
     <div>
-      <PostListItem />
-      <PostListItem />
-      <PostListItem />
-      <PostListItem />
+        {(posts || []).map((post: any) => (
+            <PostListItem post={post} key={post?.id} />
+        ))}
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { Pagination } from 'react-bulma-components';
 
-export const PostPagination = () => {
-  return <Pagination current={3} showFirstLast total={5} />;
+export const PostPagination = ({ pagination }: any) => {
+  return <Pagination current={pagination?.current} showFirstLast total={pagination?.last_page} onChange={() => alert("change")}/>;
 };
