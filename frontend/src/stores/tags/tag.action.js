@@ -31,7 +31,7 @@ export function fetchAllPost() {
       dispatch(loading(false));
     } catch (err) {
       dispatch(loading(false));
-      throw err;
+      throw err.response;
     }
   };
 }
@@ -47,7 +47,7 @@ export function fetchPostById(id) {
       dispatch(loading(false));
     } catch (err) {
       dispatch(loading(false));
-      throw err;
+      throw err.response;
     }
   };
 }

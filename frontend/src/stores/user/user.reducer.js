@@ -1,8 +1,14 @@
-import { CURRENT_USER, FETCH_USERS, USER_LOADING } from "./action.type";
+import {
+  CURRENT_USER,
+  FETCH_USER,
+  FETCH_USERS,
+  USER_LOADING,
+} from "./action.type";
 
 const init = {
   users: [],
-  currentUsers: {},
+  user: {},
+  currentUsers: "",
   loading: false,
 };
 
@@ -18,11 +24,19 @@ export default function userReducer(state = init, { type, payload }) {
         ...state,
         users: payload,
       };
+
+    case FETCH_USER:
+      return {
+        ...state,
+        user: payload,
+      };
+
     case USER_LOADING:
       return {
         ...state,
         loading: payload,
       };
+
     default:
       return state;
   }

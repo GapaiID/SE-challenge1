@@ -1,16 +1,21 @@
 import { Button, ButtonGroup } from "@chakra-ui/button";
-import { Box, Flex, HStack } from "@chakra-ui/layout";
+import { Flex, HStack } from "@chakra-ui/layout";
 import { Logo } from ".";
 import SearchBar from "./SearchBar";
-import SearchLogo from "./SearchLogo";
 
 export default function Navbar() {
   return (
-    <Flex position="sticky" top={0}>
+    <Flex
+      zIndex={10}
+      position="sticky"
+      top={0}
+      width={"100vw"}
+      bg="white"
+      justifyContent={"center"}
+    >
       <HStack
-        width="full"
+        width="60vw"
         justifyContent="space-between"
-        bg="white"
         paddingY="1rem"
         gap={"4rem"}
       >

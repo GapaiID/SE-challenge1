@@ -1,5 +1,7 @@
 import axios from "axios";
 import { LOADING, POST, POSTS, POST_URL } from "./action.type";
+import getToken from "../../utils/getToken";
+import { TOKEN } from "../../utils/constants";
 
 export function fetchPostsSuccess(payload) {
   return {
@@ -25,13 +27,23 @@ export function fetchAllPost() {
     try {
       dispatch(loading(true));
 
-      const posts = await axios.get(POST_URL);
+      const token = getToken(TOKEN);
+
+      console.log(token);
+
+      let { data: posts } = await axios.get(POST_URL, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!posts.length) throw new Error("Failed to fetch posts");
 
       dispatch(fetchPostsSuccess(posts));
       dispatch(loading(false));
     } catch (err) {
       dispatch(loading(false));
-      throw err;
+      throw err.response;
     }
   };
 }
@@ -41,13 +53,19 @@ export function fetchPostById(id) {
     try {
       dispatch(loading(true));
 
-      const post = await axios.get(POST_URL + `/${id}`);
+      const token = getToken(TOKEN);
+
+      let { data: post } = await axios.get(POST_URL + `/${id}`, {
+        headers: {
+          Authorization: token,
+        },
+      });
 
       dispatch(fetchPostByIdSuccess(post));
       dispatch(loading(false));
     } catch (err) {
       dispatch(loading(false));
-      throw err;
+      throw err.response;
     }
   };
 }
