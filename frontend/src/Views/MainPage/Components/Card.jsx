@@ -18,7 +18,6 @@ export default function MainCard({ post }) {
     title,
     image_src: img,
     creator_name,
-    creator_id,
     tags,
   } = useMemo(() => {
     return post;

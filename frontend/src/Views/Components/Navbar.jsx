@@ -1,4 +1,4 @@
-import { Button, ButtonGroup } from "@chakra-ui/button";
+import { ButtonGroup } from "@chakra-ui/button";
 import { Flex, HStack } from "@chakra-ui/layout";
 import { Logo } from ".";
 import SearchBar from "./SearchBar";

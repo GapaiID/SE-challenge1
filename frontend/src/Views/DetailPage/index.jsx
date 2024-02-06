@@ -1,12 +1,4 @@
-import {
-  Box,
-  HStack,
-  Image,
-  Tag,
-  TagLabel,
-  Text,
-  useToast,
-} from "@chakra-ui/react";
+import { Box, HStack, Image, Text, useToast } from "@chakra-ui/react";
 import { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -35,20 +27,13 @@ export default function DetailPage() {
       }
     }
     fetchPost();
-  }, [id]);
+  }, [id, dispatcher, navigator, toaster]);
 
-  const {
-    title,
-    content,
-    creator_name,
-    image_src,
-    creator_id,
-    tags,
-    created_at,
-  } = useMemo(() => {
-    console.log(post);
-    return post;
-  }, [post]);
+  const { title, content, creator_name, image_src, tags, created_at } =
+    useMemo(() => {
+      console.log(post);
+      return post;
+    }, [post]);
 
   if (loading) return <Loading />;
 
