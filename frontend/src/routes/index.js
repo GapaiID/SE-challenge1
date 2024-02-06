@@ -1,6 +1,7 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import { AuthLayout, MainLayout } from "../Layouts";
 import { LoginPage, MainPage, RegisterPage } from "../Views";
+import DetailPage from "../Views/DetailPage";
 
 const mainRoutes = [
   {
@@ -11,6 +12,10 @@ const mainRoutes = [
     index: true,
     path: "home",
     element: <MainPage />,
+  },
+  {
+    path: "posts/:id",
+    element: <DetailPage />,
   },
   {
     path: "*",

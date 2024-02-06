@@ -57,7 +57,7 @@ export function fetchPostById(id) {
 
       let { data: post } = await axios.get(POST_URL + `/${id}`, {
         headers: {
-          Authorization: token,
+          Authorization: `Bearer ${token}`,
         },
       });
 
