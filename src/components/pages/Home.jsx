@@ -1,14 +1,19 @@
 import Navbar from "../templates/Navbar";
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import { FaMagnifyingGlass, FaPlus } from "react-icons/fa6";
 import Card from "../templates/Card";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { dataPosts } from "../../database";
+import { usePostsContext } from "../../context";
 
 export default function Home() {
     const [searchQuery, setSearchQuery] = useState("");
     const [posts, setPosts] = useState([]);
+    const currentPosts = usePostsContext((state) => state.posts);
+    const updatePosts = usePostsContext((state) => state.updatePosts);
+
     function searchPost() {
-        const filteredPosts = dataPosts.filter((post) => {
+        const filteredPosts = currentPosts.filter((post) => {
             return post.title.toLowerCase().includes(searchQuery.toLowerCase());
         });
 
@@ -16,14 +21,19 @@ export default function Home() {
     };
 
     useState(() => {
-        setPosts(dataPosts);
-    }, [posts]);
+        console.log(currentPosts);
+        if (currentPosts.length == 0) {
+            updatePosts(dataPosts);
+        } else {
+            setPosts(currentPosts);
+        }
+    }, [posts, currentPosts]);
+
     return (
         <section className="flex flex-col w-screen min-h-screen bg-white">
             <Navbar />
             <div className="flex flex-row w-full justify-center">
                 <div className="flex flex-col w-3/5">
-                    {/* Cards */}
                     {
                         posts.length > 0
                         &&
@@ -33,6 +43,11 @@ export default function Home() {
                     }
                 </div>
                 <div className="flex flex-col w-1/5 bg-white mt-6">
+                    <div className="flex flex-col w-full justify-center items-center my-4">
+                        <Link to={'/add-post'} className="flex flex-row px-4 py-1 justify-center items-center rounded-full bg-pink-200 hover:bg-pink-300 transition duration-500 gap-2 cursor-pointer">
+                            <FaPlus color="white" /> <span className="text-pink-500">Create Post</span>
+                        </Link>
+                    </div>
                     <div className="p-4 w-full flex flex-col  bg-white rounded-xl border border-slate-200">
                         <div className="flex flex-row w-full h-8 border border-slate-200 rounded-full">
                             <input

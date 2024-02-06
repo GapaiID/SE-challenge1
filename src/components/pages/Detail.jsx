@@ -3,21 +3,21 @@ import Navbar from "../templates/Navbar";
 import { BsPencilSquare } from "react-icons/bs";
 import { FaTrash } from "react-icons/fa6";
 import { useParams } from "react-router-dom";
-import { dataPosts } from "../../database";
+import { usePostsContext } from "../../context";
 
 export default function DetailPost() {
     const { post_id } = useParams();
     const [post, setPost] = useState({});
+    const posts = usePostsContext((state) => state.posts);
 
     useEffect(() => {
-        const filteredPosts = dataPosts.filter((post) => {
+        const filteredPosts = posts.filter((post) => {
             return post.id == post_id;
         });
 
         setPost(filteredPosts[0]); 
     }, []);
 
-    console.log(post);
     return (
         <section className="flex flex-col w-screen min-h-screen bg-white">
             <Navbar />
