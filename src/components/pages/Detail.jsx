@@ -2,20 +2,44 @@ import { useEffect, useState } from "react";
 import Navbar from "../templates/Navbar";
 import { BsPencilSquare } from "react-icons/bs";
 import { FaTrash } from "react-icons/fa6";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { usePostsContext } from "../../context";
+import { Report } from "notiflix";
 
 export default function DetailPost() {
     const { post_id } = useParams();
     const [post, setPost] = useState({});
     const posts = usePostsContext((state) => state.posts);
+    const updatePosts = usePostsContext((state) => state.updatePosts);
+
+    const navigate = useNavigate();
+    function handleDelete() {
+        const newPosts = [];
+        posts.forEach((post) => {
+            if (post.id != post_id) {
+                newPosts.push(post);
+            }
+        });
+
+        console.log(newPosts);
+
+        updatePosts(newPosts);
+        Report.success(
+            'Success',
+            'Successfully Delete Post',
+            'Ok',
+            () => {
+                navigate('/');
+            }
+        );
+    }
 
     useEffect(() => {
         const filteredPosts = posts.filter((post) => {
             return post.id == post_id;
         });
 
-        setPost(filteredPosts[0]); 
+        setPost(filteredPosts[0]);
     }, []);
 
     return (
@@ -51,11 +75,11 @@ export default function DetailPost() {
                             </div>
                         </div>
                         <div className="flex w-full flex-row py-2 px-3 my-1 gap-2">
-                            <Link to={`/edit-post/${post_id}`} className="flex flex-row gap-2 rounded-full px-4 py-1 cursor-pointer bg-orange-100">
+                            <Link to={`/edit-post/${post_id}`} className="flex flex-row gap-2 rounded-full px-4 py-1 cursor-pointer bg-orange-100 hover:bg-orange-200 transition duration-500">
                                 <span className="font-semibold text-xs text-orange-500">Edit</span>
                                 <BsPencilSquare color="orange" />
                             </Link>
-                            <div className="flex flex-row gap-2 rounded-full px-4 py-1 cursor-pointer bg-rose-100">
+                            <div className="flex flex-row gap-2 rounded-full px-4 py-1 cursor-pointer bg-rose-100 hover:bg-rose-200 transition duration-500" onClick={handleDelete}>
                                 <span className="font-semibold text-xs text-red-500">Delete</span>
                                 <FaTrash color="red" />
                             </div>

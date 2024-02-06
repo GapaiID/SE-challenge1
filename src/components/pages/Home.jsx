@@ -1,16 +1,17 @@
 import Navbar from "../templates/Navbar";
 import { FaMagnifyingGlass, FaPlus } from "react-icons/fa6";
 import Card from "../templates/Card";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import { dataPosts } from "../../database";
-import { usePostsContext } from "../../context";
+import { usePostsContext, useQueryContext } from "../../context";
 
 export default function Home() {
     const [searchQuery, setSearchQuery] = useState("");
     const [posts, setPosts] = useState([]);
     const currentPosts = usePostsContext((state) => state.posts);
     const updatePosts = usePostsContext((state) => state.updatePosts);
+    const [searchParams, setSearchParams] = useSearchParams();
 
     function searchPost() {
         const filteredPosts = currentPosts.filter((post) => {
@@ -21,12 +22,26 @@ export default function Home() {
     };
 
     useState(() => {
-        if (currentPosts.length == 0) {
+        if (searchParams.get('tags')) {
+            if (currentPosts.length > 0) {
+                const filteredPosts = currentPosts.filter((post) => {
+                    return post.tags.toLowerCase().includes(searchParams.get('tags').toLowerCase());
+                });
+
+                setPosts(filteredPosts);
+            } else {
+                const filteredPosts = dataPosts.filter((post) => {
+                    return post.tags.toLowerCase().includes(searchParams.get('tags').toLowerCase());
+                });
+
+                setPosts(filteredPosts);
+            }
+        } else if (currentPosts.length == 0) {
             updatePosts(dataPosts);
         } else {
             setPosts(currentPosts);
         }
-    }, [posts, currentPosts]);
+    }, [posts, currentPosts, searchParams]);
 
     return (
         <section className="flex flex-col w-screen min-h-screen bg-white">

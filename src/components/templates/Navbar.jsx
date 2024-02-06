@@ -11,13 +11,13 @@ export default function Navbar() {
                     <Link to={'/'} className="flex hover:font-semibold cursor-pointer">
                         <span className="text-xl">Home</span>
                     </Link>
-                    <Link to={'/?q=technology'} className="flex hover:font-semibold cursor-pointer">
+                    <Link to={'/?tags=technology'} className="flex hover:font-semibold cursor-pointer">
                         <span className="text-xl">Technology</span>
                     </Link>
-                    <Link to={'/?q=technology'} className="flex hover:font-semibold cursor-pointer">
+                    <Link to={'/?tags=science'} className="flex hover:font-semibold cursor-pointer">
                         <span className="text-xl">Science</span>
                     </Link>
-                    <Link to={'/?q=technology'} className="flex hover:font-semibold cursor-pointer">
+                    <Link to={'/?tags=social'} className="flex hover:font-semibold cursor-pointer">
                         <span className="text-xl">Social</span>
                     </Link>
                 </div>
