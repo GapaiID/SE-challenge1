@@ -26,7 +26,29 @@ export default function PostForm({ formType }) {
     }
 
     function handleEdit() {
+        const newPosts = posts.map((post) => {
+            if (post.id == post_id) {
+                post.title = form.title;
+                post.body = form.body;
+                post.tags = form.tags;
+                post.author = form.author;
+                post.created_at = form.created_at;
+                post.img_url = form.img_url;
+            }
 
+            return post;
+        });
+
+        updatePosts(newPosts);
+        Report.success(
+            'Success',
+            'Successfully Edit Post',
+            'Ok',
+            () => {
+                setForm({ title: '', body: '', tags: '', author: '', created_at: '', img_url: '' });
+                navigate('/');
+            }
+        );
     }
 
     useEffect(() => {
@@ -35,7 +57,7 @@ export default function PostForm({ formType }) {
                 return post.id == post_id;
             });
 
-            setPost(filteredPosts[0]);
+            setForm(filteredPosts[0]);
         }
     }, [])
     return (
@@ -55,6 +77,7 @@ export default function PostForm({ formType }) {
                     }}
                     className="focus:bg-slate-100 focus:outline-none p-4 border-solid border-slate-800 rounded-lg h-10 w-full border-opacity-10 pr-10"
                     style={{ borderWidth: 1 }}
+                    placeholder="My First Post"
                 />
             </div>
             <div className="pb-1">
@@ -126,7 +149,7 @@ export default function PostForm({ formType }) {
                     }}
                     className="focus:bg-slate-100 focus:outline-none p-4 border-solid border-slate-800 rounded-lg h-10 w-full border-opacity-10 pr-10"
                     style={{ borderWidth: 1 }}
-                    placeholder="Feb 06 2024"
+                    placeholder="https://your-image-link.png"
                 />
             </div>
             <div className="pb-1">
@@ -147,8 +170,8 @@ export default function PostForm({ formType }) {
                     placeholder="Feb 06 2024"
                 />
             </div>
-            <div className="h-12 bg-lime-100 rounded-xl justify-center content-center items-center cursor-pointer flex mt-4 hover:bg-lime-200 transition duration-500 shadow-sm" onClick={formType === 'add' ? () => handleAdd() : () => handleEdit()}>
-                <span className="font-bold text-lime-500 cursor-pointer">{formType === 'add' ? "Create new post" : "Edit"}</span>
+            <div className={`h-12  ${formType === 'add' ? "bg-lime-100" : "bg-orange-100"} rounded-xl justify-center content-center items-center cursor-pointer flex mt-4 ${formType === 'add' ? "hover:bg-lime-200" : "hover:bg-orange-200"} transition duration-500 shadow-sm`} onClick={formType === 'add' ? () => handleAdd() : () => handleEdit()}>
+                <span className={`font-bold ${formType === 'add' ? "text-lime-500" : "text-orange-500"} cursor-pointer`}>{formType === 'add' ? "Create new post" : "Edit"}</span>
             </div>
         </form>
     )

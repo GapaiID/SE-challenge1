@@ -21,7 +21,6 @@ export default function Home() {
     };
 
     useState(() => {
-        console.log(currentPosts);
         if (currentPosts.length == 0) {
             updatePosts(dataPosts);
         } else {

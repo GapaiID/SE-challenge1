@@ -31,7 +31,7 @@ export default function Card({ post }) {
                     <span className="text-sm font-light">{post.created_at}</span>
                 </div>
                 <div className="flex w-full flex-row py-2">
-                    <div className={`flex rounded-full px-4 py-1 bg-sky-100 ${post.tags === "Technology" ? "bg-sky-100" : post.tags === "Science" ? "bg-green-100" : "bg-orange-100"}`}>
+                    <div className={`flex rounded-full px-4 py-1 ${post.tags === "Technology" ? "bg-sky-100" : post.tags === "Science" ? "bg-green-100" : "bg-orange-100"}`}>
                         <span className={`font-semibold text-xs ${post.tags === "Technology" ? "text-sky-500" : post.tags === "Science" ? "text-green-500" : "text-orange-500"}`}>{post.tags}</span>
                     </div>
                 </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "../templates/Navbar";
 import { BsPencilSquare } from "react-icons/bs";
 import { FaTrash } from "react-icons/fa6";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { usePostsContext } from "../../context";
 
 export default function DetailPost() {
@@ -51,10 +51,10 @@ export default function DetailPost() {
                             </div>
                         </div>
                         <div className="flex w-full flex-row py-2 px-3 my-1 gap-2">
-                            <div className="flex flex-row gap-2 rounded-full px-4 py-1 cursor-pointer bg-orange-100">
+                            <Link to={`/edit-post/${post_id}`} className="flex flex-row gap-2 rounded-full px-4 py-1 cursor-pointer bg-orange-100">
                                 <span className="font-semibold text-xs text-orange-500">Edit</span>
                                 <BsPencilSquare color="orange" />
-                            </div>
+                            </Link>
                             <div className="flex flex-row gap-2 rounded-full px-4 py-1 cursor-pointer bg-rose-100">
                                 <span className="font-semibold text-xs text-red-500">Delete</span>
                                 <FaTrash color="red" />
