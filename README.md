@@ -57,3 +57,8 @@ You are tasked with building the frontend for a simple personal blog. User can r
 - Be sure to notify us when it is submitted by sending us email through faizal@gapai.id with title format **[SE - Submission] - yourname** and send me the related link.
 
 Happy Hacking! 🤘
+
+## Assignee
+- Name: Jendy Caprico
+- Email: jendycaprico@gmail.com
+- Phone: +62 81546063346
