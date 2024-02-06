@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <section className="flex flex-col w-screen min-h-screen bg-white">
             <Navbar />
-            <div className="flex flex-row w-full justify-center  ">
+            <div className="flex flex-row w-full justify-center">
                 <div className="flex flex-col w-3/5">
                     {/* Cards */}
                     {
@@ -52,18 +52,18 @@ export default function Home() {
                         <div className="w-full flex flex-row justify-center mt-6 gap-6">
                             <div className="w-full flex flex-col justify-center gap-3">
                                 <div className="flex rounded-full cursor-pointer px-4 py-1 bg-sky-100 justify-center">
-                                    <span className="font-semibold text-xs">Technology</span>
+                                    <span className="font-semibold text-xs text-sky-500">Technology</span>
                                 </div>
-                                <div className="flex rounded-full cursor-pointer px-4 py-1 bg-pink-100 justify-center">
-                                    <span className="font-semibold text-xs">Science</span>
+                                <div className="flex rounded-full cursor-pointer px-4 py-1 bg-green-100 justify-center">
+                                    <span className="font-semibold text-xs text-green-500">Science</span>
                                 </div>
                             </div>
                             <div className="w-full flex flex-col justify-center gap-3">
                                 <div className="flex rounded-full cursor-pointer px-4 py-1 bg-orange-100 justify-center">
-                                    <span className="font-semibold text-xs">Social</span>
+                                    <span className="font-semibold text-xs text-orange-500">Social</span>
                                 </div>
                                 <div className="flex rounded-full cursor-pointer px-4 py-1 bg-violet-100 justify-center">
-                                    <span className="font-semibold text-xs">All</span>
+                                    <span className="font-semibold text-xs text-violet-500">All</span>
                                 </div>
                             </div>
                         </div>
