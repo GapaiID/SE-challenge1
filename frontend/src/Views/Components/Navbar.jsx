@@ -2,6 +2,8 @@ import { Button, ButtonGroup } from "@chakra-ui/button";
 import { Flex, HStack } from "@chakra-ui/layout";
 import { Logo } from ".";
 import SearchBar from "./SearchBar";
+import NavButton from "./NavButton";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -19,7 +21,9 @@ export default function Navbar() {
         paddingY="1rem"
         gap={"4rem"}
       >
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <ButtonGroup
           variant={"ghost"}
           spacing="1rem"
@@ -28,15 +32,8 @@ export default function Navbar() {
           paddingX="1rem"
           justifyContent="center"
         >
-          <Button colorScheme={"gray"} textColor="gray.600">
-            Home
-          </Button>
-          <Button colorScheme={"gray"} textColor="gray.600">
-            Home
-          </Button>
-          <Button colorScheme={"gray"} textColor="gray.600">
-            Home
-          </Button>
+          <NavButton text="Tags" route="#" />
+          <NavButton text="Profile" route="#" />
         </ButtonGroup>
         <Flex gap={"1rem"}>
           <SearchBar />

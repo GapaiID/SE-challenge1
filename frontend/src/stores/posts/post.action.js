@@ -29,8 +29,6 @@ export function fetchAllPost() {
 
       const token = getToken(TOKEN);
 
-      console.log(token);
-
       let { data: posts } = await axios.get(POST_URL, {
         headers: {
           Authorization: `Bearer ${token}`,
