@@ -5,9 +5,7 @@ import {
   DrawerCloseButton,
   DrawerContent,
   DrawerFooter,
-  DrawerHeader,
   DrawerOverlay,
-  Input,
 } from "@chakra-ui/react";
 import { Flex, HStack } from "@chakra-ui/layout";
 import { Logo } from ".";
