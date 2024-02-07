@@ -19,7 +19,7 @@ export default function SearchBar() {
     }
   };
   return (
-    <InputGroup as="form" onSubmit={searchQuery}>
+    <InputGroup as="form" onSubmit={searchQuery} maxW="80%">
       <Input onChange={handleChange} />
       <Box as="button" type="submit">
         <InputRightAddon>

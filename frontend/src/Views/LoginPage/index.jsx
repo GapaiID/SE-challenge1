@@ -37,7 +37,14 @@ export default function LoginPage() {
 
       navigator("/");
     } catch (err) {
-      console.log(err);
+      toaster({
+        status: "error",
+        title: err?.message ?? err,
+        duration: 1700,
+        isClosable: true,
+        position: "top-right",
+        variant: "left-accent",
+      });
     }
   };
 
