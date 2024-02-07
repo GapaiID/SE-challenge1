@@ -21,8 +21,6 @@ export default function DetailPost() {
             }
         });
 
-        console.log(newPosts);
-
         updatePosts(newPosts);
         Report.success(
             'Success',
@@ -53,6 +51,7 @@ export default function DetailPost() {
                                 src={post?.img_url}
                                 alt="tes"
                             />
+                            Image by <a href={`${post?.attribute}`}>{post?.attribute_from}</a>
                         </div>
                     </div>
                     <div className="flex flex-col w-2/3 pt-2 pb-4">

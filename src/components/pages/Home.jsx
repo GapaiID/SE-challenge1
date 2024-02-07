@@ -4,14 +4,14 @@ import Card from "../templates/Card";
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { dataPosts } from "../../database";
-import { usePostsContext, useQueryContext } from "../../context";
+import { usePostsContext } from "../../context";
 
 export default function Home() {
     const [searchQuery, setSearchQuery] = useState("");
     const [posts, setPosts] = useState([]);
     const currentPosts = usePostsContext((state) => state.posts);
     const updatePosts = usePostsContext((state) => state.updatePosts);
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
 
     function searchPost() {
         const filteredPosts = currentPosts.filter((post) => {
@@ -21,7 +21,7 @@ export default function Home() {
         setPosts(filteredPosts);
     };
 
-    useState(() => {
+    useEffect(() => {
         if (searchParams.get('tags')) {
             if (currentPosts.length > 0) {
                 const filteredPosts = currentPosts.filter((post) => {
@@ -41,7 +41,7 @@ export default function Home() {
         } else {
             setPosts(currentPosts);
         }
-    }, [posts, currentPosts, searchParams]);
+    }, [currentPosts, searchParams]);
 
     return (
         <section className="flex flex-col w-screen min-h-screen bg-white">
@@ -58,8 +58,8 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col w-1/5 bg-white mt-6">
                     <div className="flex flex-col w-full justify-center items-center my-4">
-                        <Link to={'/add-post'} className="flex flex-row px-4 py-1 justify-center items-center rounded-full bg-pink-200 hover:bg-pink-300 transition duration-500 gap-2 cursor-pointer">
-                            <FaPlus color="white" /> <span className="text-pink-500">Create Post</span>
+                        <Link to={'/add-post'} className="flex flex-row px-4 py-1 justify-center items-center rounded-full bg-pink-300 hover:bg-pink-400 transition duration-500 gap-2 cursor-pointer">
+                            <FaPlus color="white" /> <span className="text-white font-semibold">Create Post</span>
                         </Link>
                     </div>
                     <div className="p-4 w-full flex flex-col  bg-white rounded-xl border border-slate-200">
@@ -80,20 +80,20 @@ export default function Home() {
                         </div>
                         <div className="w-full flex flex-row justify-center mt-6 gap-6">
                             <div className="w-full flex flex-col justify-center gap-3">
-                                <div className="flex rounded-full cursor-pointer px-4 py-1 bg-sky-100 justify-center">
+                                <Link to={'/?tags=technology'} className="flex rounded-full cursor-pointer px-4 py-1 bg-sky-100 justify-center">
                                     <span className="font-semibold text-xs text-sky-500">Technology</span>
-                                </div>
-                                <div className="flex rounded-full cursor-pointer px-4 py-1 bg-green-100 justify-center">
+                                </Link>
+                                <Link to={'/?tags=science'} className="flex rounded-full cursor-pointer px-4 py-1 bg-green-100 justify-center">
                                     <span className="font-semibold text-xs text-green-500">Science</span>
-                                </div>
+                                </Link>
                             </div>
                             <div className="w-full flex flex-col justify-center gap-3">
-                                <div className="flex rounded-full cursor-pointer px-4 py-1 bg-orange-100 justify-center">
+                                <Link to={'?/tags=social'} className="flex rounded-full cursor-pointer px-4 py-1 bg-orange-100 justify-center">
                                     <span className="font-semibold text-xs text-orange-500">Social</span>
-                                </div>
-                                <div className="flex rounded-full cursor-pointer px-4 py-1 bg-violet-100 justify-center">
+                                </Link>
+                                <Link to={'/'} className="flex rounded-full cursor-pointer px-4 py-1 bg-violet-100 justify-center">
                                     <span className="font-semibold text-xs text-violet-500">All</span>
-                                </div>
+                                </Link>
                             </div>
                         </div>
                     </div>

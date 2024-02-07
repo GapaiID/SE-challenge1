@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { usePostsContext } from "../../context";
-import { redirect, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Report } from "notiflix";
 
 export default function PostForm({ formType }) {
@@ -23,7 +23,7 @@ export default function PostForm({ formType }) {
                 navigate('/');
             }
         );
-    }
+    };
 
     function handleEdit() {
         const newPosts = posts.map((post) => {
@@ -49,7 +49,7 @@ export default function PostForm({ formType }) {
                 navigate('/');
             }
         );
-    }
+    };
 
     useEffect(() => {
         if (formType === 'edit' && post_id) {
@@ -59,7 +59,8 @@ export default function PostForm({ formType }) {
 
             setForm(filteredPosts[0]);
         }
-    }, [])
+    }, []);
+
     return (
         <form className="flex flex-col w-1/2">
             <div className="pb-1">

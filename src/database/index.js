@@ -1,56 +1,68 @@
 export const dataPosts = [
     {
-        "id" : 1,
-        "title": "JSON is incredibly slow: Here’s What’s Faster!",
-        "body": "JSON, short for JavaScript Object Notation, is a lightweight data interchange format that has become the go-to choice for transmitting and storing data in web applications. Its simplicity and human-readable format make it easy for both humans and machines to work with. But why should you care about JSON in the context of your web development projects? JSON is the glue that holds together the data in your applications. It’s the language in which data is communicated between servers and clients, and it’s the format in which data is stored in databases and configuration files. In essence, JSON plays a pivotal role in modern web development. Understanding JSON and its nuances is not only a fundamental skill for any web developer but also crucial for optimizing your applications. As we delve deeper into this blog, you’ll discover why JSON can be a double-edged sword when it comes to performance and how this knowledge can make a significant difference in your development journey.",
+        "id": 1,
+        "title": "The Rise of Quantum Computing: Revolutionizing Technology",
+        "body": "Quantum computing, a revolutionary technology that promises to change the landscape of computing as we know it, is making significant strides in recent years. Unlike classical computers that rely on bits to process information, quantum computers use quantum bits, or qubits, which can exist in multiple states simultaneously. This parallel processing capability enables quantum computers to solve complex problems much faster than classical computers. Industries ranging from healthcare to finance are eagerly anticipating the potential of quantum computing to revolutionize their operations. As researchers continue to make breakthroughs in quantum hardware and algorithms, the possibilities seem endless. In this blog post, we'll explore the basics of quantum computing, its current state, and the potential applications that could reshape our world.",
         "tags": "Technology",
-        "author": "Vaishnav Manoj",
+        "author": "Alice Quantum",
         "created_at": "Sep 28, 2023",
-        "img_url": "https://miro.medium.com/v2/resize:fit:828/format:webp/1*I2ObYjzqveyXzEe9QixMPw.png"
+        "img_url": "https://img.freepik.com/free-photo/ai-cloud-concept-with-cube_23-2149739756.jpg?w=826&t=st=1707270519~exp=1707271119~hmac=46853acf01671a7672002c97b27bcbceaff13f44fddd3f18012cd1135b646aa7",
+        "attribute": "https://www.freepik.com/free-photo/ai-cloud-concept-with-cube_32471123.htm#query=quantum%20computing&position=6&from_view=search&track=ais&uuid=d62329b1-de3a-4e19-8fef-050bcdf58b2f",
+        "attribute_from": "Freepik"
     },
     {
-        "id" : 2,
-        "title": "React Native vs. Flutter: 2023",
-        "body": "Almost two years ago, I wrote a blog post comparing React Native and Flutter at a time when I was still somewhat new to Flutter. I had spoken very highly of it, but also paid some respect to React Native. I had more experience with React Native and loved (and still do) its web OG, ReactJS. Almost two years later, I will say that I have become far less impartial. Long story short, I feel that FLUTTER is absolutely the better mobile framework. Yep. I said it. Flutter is easily the superior mobile framework. I get it, a lot of it has to do with each individual, their development and learning style, goals, etc. From my personal experience, as well as the experience of a few mobile devs in my network, Flutter is simply more streamlined than React Native. This efficiency is apparent in Flutter’s growing popularity. So you might be wondering, then, why React Native continues to be so popular? Well, I have a theory, consisting of two big catalysts.",
-        "tags": "Technology",
-        "author": "Matt Croak Code",
+        "id": 2,
+        "title": "The Future of Space Exploration: Unveiling the Mysteries of the Cosmos",
+        "body": "Space exploration has always captivated the imagination of humanity, driving us to push the boundaries of what's possible. With advancements in technology and international collaboration, we are entering a new era of space exploration. From missions to Mars to the search for extraterrestrial life, scientists and engineers are working tirelessly to unlock the secrets of the cosmos. But space exploration isn't just about satisfying our curiosity; it also has practical applications, from advancing scientific knowledge to inspiring the next generation of innovators. In this blog post, we'll take a closer look at the future of space exploration and the incredible discoveries that await us.",
+        "tags": "Science",
+        "author": "Neil Stargazer",
         "created_at": "Aug 24, 2023",
-        "img_url": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*Mnuh0uGWJEwrSbH_.jpg"
+        "img_url": "https://img.freepik.com/free-photo/spacecraft-orbiting-planet-earth-global-communications-generated-by-ai_188544-22043.jpg?w=1060&t=st=1707270608~exp=1707271208~hmac=374c6840f8ad8e49efedce94574e44a600417e4540c69b2df48c870fdbc2b400",
+        "attribute": "https://www.freepik.com/free-photo/spacecraft-orbiting-planet-earth-global-communications-generated-by-ai_41438906.htm#query=satelite&position=0&from_view=search&track=sph&uuid=d6c408b0-1dfd-4d1a-846d-2b787203a603",
+        "attribute_from": "vecstock on Freepik"
     },
     {
-        "id" : 3,
-        "title": "Forever Functional #35 — Optimizing JavaScript… Which Way?",
-        "body": "Optimizing JavaScript performance is not a trivial task, and this article will show you how to tackle one problem involving large arrays and many operations, going from a first (slow) version to a (much optimized) final one, discussing many good and bad options along the way. In our previous articles we saw two distinct ways to optimize long array operations… but which is better? Without paying attention to actual performance, we could note that the first (very functional!) solution, using transducers, could be considered complex and somewhat challenging to understand. On the other hand, the more straightforward solution, without transducers, was longer but arguably clearer. In any case, that’s not what worries us; after all, usage was similar for both solutions, so their internal complexity isn’t significant. We need to compare both solutions in terms of performance and maybe try to optimize them to the maximum so we can decide which way to go.",
-        "tags": "Technology",
-        "author": "Federico Kereki",
+        "id": 3,
+        "title": "The Art of Mindfulness: Cultivating Peace in a Hectic World",
+        "body": "In today's fast-paced world, finding moments of peace and tranquility can seem like a daunting task. However, mindfulness offers a powerful antidote to the chaos of modern life. By practicing mindfulness, we can cultivate a greater sense of awareness and presence, allowing us to fully engage with the present moment. From simple breathing exercises to mindful meditation, there are countless techniques that can help us develop a more mindful way of living. In this blog post, we'll explore the art of mindfulness and discover how it can bring greater peace and happiness into our lives.",
+        "tags": "Science",
+        "author": "Zen Master",
         "created_at": "Jan 30, 2024",
-        "img_url": "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*rzEYD_69uKhT5MCD.png"
+        "img_url": "https://img.freepik.com/free-photo/woman-meditating-indoor_23-2148835380.jpg?w=996&t=st=1707270665~exp=1707271265~hmac=5280939f26ef0d3f36ea8f6dc82c800d62b756e284f6fd521500bd3bac5f34b3",
+        "attribute": "https://www.freepik.com/free-photo/woman-meditating-indoor_12246318.htm#query=mindfullness&position=1&from_view=search&track=sph&uuid=3a5f26d0-3d65-4639-9cdd-8e5043e37396",
+        "attribute_from": "Freepik"
     },
     {
-        "id" : 4,
-        "title": "No Genetic Baggage",
-        "body": "I don’t have a relationship with my blood family. Some connections were broken by me, and some by them. Either way, it was always for the best, and honestly, I don’t miss any of them, including those who have passed on. Some children become obsessed with the idea that they may have been adopted. I always knew I was related to the members of my family; there was no doubt about that, but I also felt like I was born into the wrong family. I did not belong with them. I did not belong to them. Maybe that’s why I didn’t bear children. Perhaps I didn’t want to pass along genes that never felt like mine. Maybe I was afraid of birthing a child who was more like my family than me. Then, what would I do? It’s one thing to let go of relatives and another to let go of your own child. At the age of 49, I adopted a runaway teenage girl originally from Honduras. At the age of 53, she made me a grandmother. I’ve heard grandparents say they looked at their newborn grandchild and imagined all the ancestors who came before. They felt a deep, visceral bond to that baby, an attachment that went back generations. As I stood in the delivery room watching my grandson being born, I was overwhelmed with feelings of love and connection, but also a relief. Relief that he didn’t carry my genetic baggage. Relief that he wouldn’t grow up to remind me of my father. Relief that he was related to me by love and not by blood. I felt a bond that was arguably as strong as that of any grandparent but one that didn’t go back beyond me, one that involved only him, his mother, and me. A connection that felt as fresh and pure as he was.",
+        "id": 4,
+        "title": "The Wonders of Marine Biology: Exploring Earth's Hidden Depths",
+        "body": "The world's oceans are teeming with life, from the smallest plankton to the largest whales. Marine biology, the study of life in the ocean, offers a fascinating glimpse into Earth's hidden depths. From coral reefs to deep-sea trenches, marine biologists explore a diverse range of ecosystems, uncovering new species and unlocking the secrets of underwater life. But marine biology isn't just about discovery; it also plays a crucial role in conservation efforts and understanding the impact of human activities on marine ecosystems. In this blog post, we'll dive into the wonders of marine biology and discover the incredible diversity of life beneath the waves.",
         "tags": "Science",
-        "author": "Dennett",
+        "author": "Marina Explorer",
         "created_at": "Feb 07, 2024",
-        "img_url": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*SZcErgPM-0gTPWBH"
+        "img_url": "https://img.freepik.com/free-photo/top-view-hand-with-surgical-gloves-holding-magnifying-glass-starfish_23-2148557630.jpg?w=826&t=st=1707271322~exp=1707271922~hmac=7a4efb3dffac2340a2e175658a234bd9fbf6a230f326cbb171645055b4949014",
+        "attribute": "https://www.freepik.com/free-photo/top-view-hand-with-surgical-gloves-holding-magnifying-glass-starfish_8420622.htm#query=marine%20biology&position=0&from_view=search&track=ais&uuid=d6292111-019a-4567-b506-aa66034562e2",
+        "attribute_from": "Freepik"
     },
     {
-        "id" : 5,
-        "title": "Shocking Existence of Kepler-16b: Planet That Shouldn’t Be There",
-        "body": "A planet that shouldn’t exist” Kepler-16 b challenges expectations and theories about planet formation and the environment since it is the existence of Kepler-16 b that goes against the grain. let’s explore the mystifying properties that set this fascinating planet that shouldn’t exist separately. Defying the Odds of Planetary Formation As an earth-sized, circumbinary planet orbiting two stars, Kepler-16b checks off not one but two major boxes that make its very existence seem unlikely. Firstly, its dual solar system: Kepler-16b remarkably orbits around two stars at once — a pairing of a K-type orange dwarf and an M-type red dwarf that orbit each other every 41 days. According to theories of planetary formation, the turbulent environment created by binary star systems tends to destroy planetesimal disks before planets can fully form. Yet Kepler-16b is right there. The second unlikely factor is Kepler-16b’s size so close to its two parent stars. At only 20% larger than Earth, it is considered an earth-sized planet. Small, rocky worlds were expected to form much farther out from binary pairs where volatile materials like water could condense. But Kepler-16b bucks these assumptions by being an earth-sized sister planet discovered in the boiling-hot orbit between two stars. An orbit that theoretically shouldn’t allow such terrestrial worlds to accumulate.",
-        "tags": "Science",
-        "author": "The Daily Updater",
+        "id": 5,
+        "title": "The Power of Positive Thinking: Transforming Your Life with Optimism",
+        "body": "Positive thinking has the power to transform our lives, allowing us to overcome obstacles and achieve our goals. By cultivating a positive mindset, we can reframe challenges as opportunities for growth and find joy in everyday experiences. From practicing gratitude to visualizing success, there are many techniques that can help us harness the power of positive thinking. In this blog post, we'll explore the science behind positive thinking and discover how it can lead to greater happiness and success.",
+        "tags": "Self Improvement",
+        "author": "Joy Optimist",
         "created_at": "Feb 01, 2024",
-        "img_url": "https://miro.medium.com/v2/resize:fit:828/format:webp/0*n3QmzRF4wuLmexrE"
+        "img_url": "https://img.freepik.com/free-photo/portrait-woman-holding-idea-light_23-2148513862.jpg?w=360&t=st=1707271395~exp=1707271995~hmac=2de262428f442dfc85e40c061318974b1f91ea0271e5981dad5e45273e4bc3f4",
+        "attribute": "https://www.freepik.com/free-photo/portrait-woman-holding-idea-light_7816271.htm#query=positive%20thinking&position=0&from_view=search&track=ais&uuid=981432a0-a62b-4c65-8cdc-faf34e2b620a",
+        "attribute_from": "Freepik"
     },
     {
-        "id" : 6,
-        "title": "Why Oversharing Our Emotions Can Destroy Our Relationships",
-        "body": "Emotions are the backbone of relationships. We’ve often heard about the importance of being open about our emotions in developing healthy relationships with others. However, based on what I’ve been through, I believe that sharing every bit of our feelings can backfire. Let’s see why. The Burden of Emotional Dumping Sharing your emotions places a responsibility on the shoulders of the other person. Imagine that person who, whenever you come across them, starts to share their frustration with you. Talking with such a person always forces us to feel compelled to empathize with their negative emotions. In dealing with them, we always should come up with the best answer to prove to them why their frustration is valid in their case. This is a very energy-consuming process for most of us. As a result, you don’t enjoy being around that person, leading to a deterioration in your relationship. Loss of Privacy The essence of effective communication is understanding and empathizing with the other person’s emotions. However, overdoing it can come with a hefty cost: Crossing our personal boundaries. Every needs personal space in their life which doesn’t include any other person. By sharing every emotion you have, you’re inviting others into that personal space, leading to a loss of privacy. As you have no privacy in any aspect of your life, there are no personal boundaries in your relationships. Where there are no boundaries, there is no respect and intimacy.",
+        "id": 6,
+        "title": "The Importance of Empathy in Relationships: Building Strong Connections",
+        "body": "Empathy is a fundamental aspect of human connection, allowing us to understand and relate to the experiences of others. In relationships, empathy plays a crucial role in fostering trust, compassion, and intimacy. By putting ourselves in our partner's shoes, we can validate their emotions and create a supportive environment for growth and healing. However, empathy isn't just about understanding; it also requires active listening and emotional responsiveness. In this blog post, we'll explore the importance of empathy in relationships and discover how it can strengthen our connections with others.",
         "tags": "Social",
-        "author": "Saeed Sobhani",
+        "author": "Emmy Empath",
         "created_at": "Feb 01, 2024",
-        "img_url": "https://miro.medium.com/v2/resize:fit:1100/format:webp/0*sqNBG6B8J7CAqJdJ"
+        "img_url": "https://img.freepik.com/free-vector/helping-hand-with-heart-background-flat-style_23-2147789119.jpg?w=740&t=st=1707271462~exp=1707272062~hmac=cfbe6a297ea29bf8c8e4afd7b1dd6155e17eb5cd34fe7337dbb562387c9b0f3b",
+        "attribute": "https://www.freepik.com/free-vector/helping-hand-with-heart-background-flat-style_2098969.htm#query=emphaty&position=0&from_view=search&track=sph&uuid=f8bf8c01-a010-4455-9420-79b3668faf70",
+        "attribute_from": "Freepik"
     },
 ];

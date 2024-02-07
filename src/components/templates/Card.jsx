@@ -1,5 +1,6 @@
 import { IoChatbubblesOutline, IoHeartOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+
 export default function Card({ post }) {
     const formattedBody = post.body.substring(0, 250);
     const likes = Math.ceil(Math.random() * 999);
@@ -14,6 +15,7 @@ export default function Card({ post }) {
                     width={124}
                     height={124}
                 />
+                Image by <a href={`${post.attribute}`}> {post.attribute_from}</a>
             </div>
             <div className="flex flex-col w-4/5 p-2">
                 <Link to={`/posts/${post.id}`} className="flex w-full hover:underline cursor-pointer">

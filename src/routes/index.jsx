@@ -9,18 +9,18 @@ import EditPost from "../components/pages/EditPost";
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Home/>,
+        element: <Home />,
     },
     {
         path: "/posts/:post_id",
-        element: <DetailPost/>,
+        element: <DetailPost />,
     },
     {
         path: "/add-post",
-        element: <AddPost/>,
+        element: <AddPost />,
     },
     {
         path: "/edit-post/:post_id",
-        element: <EditPost/>,
+        element: <EditPost />,
     },
 ]);
