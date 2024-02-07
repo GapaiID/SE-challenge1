@@ -4,6 +4,8 @@ SE-challenge1 is a blog based application that used for technical stage test in 
 ## Author
 ```bash
     Name : Arvi Naufal Agustian
+    Email : arvinaufalagustian@gmail.com
+    Phone Number : +62 851-7510-4250
     Github : https://github.com/arvinaufal
 ```
 
