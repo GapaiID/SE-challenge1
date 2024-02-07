@@ -18,9 +18,9 @@ export default function AuthCard({ children }) {
       bg="white"
       _focusWithin={{
         boxShadow: "dark-lg",
-        transitionDuration: 1000,
-        transitionBehavior: "linear",
       }}
+      transitionTimingFunction="linear"
+      transitionDuration="250ms"
       minWidth="xs"
     >
       {children}
