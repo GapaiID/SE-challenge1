@@ -14,11 +14,6 @@ npm run code:format
 ```
 
 
-### Learn Sources
-* https://github.com/jgudo/ecommerce-react
-* https://github.com/saleor/saleor-storefront/tree/main/src
-
-
 ### Contributors
 <table>
   <tr>
