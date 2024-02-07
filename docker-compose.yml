@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  app:
+    container_name: "miblog-web"
+    build:
+      context: .
+    ports:
+      - "3000:80"
