@@ -9,7 +9,7 @@ SE-challenge1 is a blog based application that used for technical stage test in 
 
 ## Deployed Link
 ```bash
-    Link : 
+    Link : https://se-challenge1-sigma.vercel.app/
 ```
 
 ## How To Run
