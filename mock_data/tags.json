@@ -1,0 +1,7 @@
+[
+  { "id": 1, "tags": "Action|Comedy" },
+  { "id": 2, "tags": "Drama|Romance" },
+  { "id": 3, "tags": "Adventure|Drama" },
+  { "id": 4, "tags": "Drama|Sci-Fi" },
+  { "id": 5, "tags": "Action|Comedy|Musical" }
+]
