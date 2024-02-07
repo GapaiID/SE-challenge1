@@ -22,7 +22,6 @@ export default function RegisterPage() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
-    console.log(form);
   };
 
   const validateForm = async (form) => {
@@ -57,7 +56,6 @@ export default function RegisterPage() {
 
       navigator("/");
     } catch (err) {
-      console.log(err);
       let msg;
 
       if (typeof err === "string") {

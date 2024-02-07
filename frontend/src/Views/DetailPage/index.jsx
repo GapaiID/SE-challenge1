@@ -31,7 +31,6 @@ export default function DetailPage() {
 
   const { title, content, creator_name, image_src, tags, created_at } =
     useMemo(() => {
-      console.log(post);
       return post;
     }, [post]);
 
