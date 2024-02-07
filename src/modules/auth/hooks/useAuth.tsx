@@ -18,8 +18,8 @@ export const useAuth = () => {
   };
 
   const doLogout = () => {
-    localStorage.removeItem("access");
-  }
+    localStorage.removeItem('access');
+  };
 
   useEffect(() => {
     doAuthCheck();

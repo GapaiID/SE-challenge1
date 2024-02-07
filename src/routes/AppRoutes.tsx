@@ -17,6 +17,9 @@ import * as userRoutes from '@modules/user/routes';
 import * as blogPages from '@modules/blog/pages';
 import * as blogRoutes from '@modules/blog/routes';
 
+import * as searchPages from '@modules/search/pages';
+import * as searchRoutes from '@modules/search/routes';
+
 import { Navbar } from '@miblog/components/Navbar';
 import { Footer } from '@miblog/components/Footer/Footer';
 import { ToastContainer } from 'react-toastify';
@@ -46,8 +49,8 @@ const AppRoutes = () => {
                 element={<authPages.RegisterPage />}
               />
               <Route
-                  path={authRoutes.LOGOUT_PAGE}
-                  element={<authPages.LogoutPage />}
+                path={authRoutes.LOGOUT_PAGE}
+                element={<authPages.LogoutPage />}
               />
 
               {/* Dashboard */}
@@ -91,20 +94,20 @@ const AppRoutes = () => {
                 element={<blogPages.BlogDetailPage />}
               />
               <Route
-                  path={blogRoutes.BLOG_CREATE_PAGE}
-                  element={
-                    <AuthRoute>
-                      <blogPages.BlogCreatePage/>
-                    </AuthRoute>
-                  }
+                path={blogRoutes.BLOG_CREATE_PAGE}
+                element={
+                  <AuthRoute>
+                    <blogPages.BlogCreatePage />
+                  </AuthRoute>
+                }
               />
               <Route
-                  path={blogRoutes.BLOG_UPDATE_PAGE}
-                  element={
-                    <AuthRoute>
-                      <blogPages.BlogUpdatePage />
-                    </AuthRoute>
-                  }
+                path={blogRoutes.BLOG_UPDATE_PAGE}
+                element={
+                  <AuthRoute>
+                    <blogPages.BlogUpdatePage />
+                  </AuthRoute>
+                }
               />
 
               {/* User */}
@@ -115,6 +118,12 @@ const AppRoutes = () => {
               <Route
                 path={userRoutes.USER_DETAIL_PAGE}
                 element={<userPages.UserDetailPage />}
+              />
+
+              {/* Search */}
+              <Route
+                path={searchRoutes.SEARCH_LIST}
+                element={<searchPages.SearchPage />}
               />
 
               {/* Page Not Found */}

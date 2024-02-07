@@ -5,7 +5,7 @@ import {
   DASHBOARD_PASSWORD_PAGE,
 } from '@modules/dashboard/routes';
 import React from 'react';
-import { LOGOUT_PAGE } from "@modules/auth/routes";
+import { LOGOUT_PAGE } from '@modules/auth/routes';
 
 export const SideMenu = () => {
   return (

@@ -2,7 +2,7 @@ import { Button, Navbar as BulmaNavbar } from 'react-bulma-components';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@modules/auth/hooks/useAuth';
 import { DASHBOARD_PAGE } from '@modules/dashboard/routes';
-import {BLOG_CREATE_PAGE} from "@modules/blog/routes";
+import { BLOG_CREATE_PAGE } from '@modules/blog/routes';
 export const Navbar = () => {
   const { isLoading, isAuthenticated } = useAuth();
   const navigate = useNavigate();
@@ -36,9 +36,9 @@ export const Navbar = () => {
                 New Post
               </BulmaNavbar.Item>
               <BulmaNavbar.Item
-                  hoverable={false}
-                  active={false}
-                  onClick={() => navigate(DASHBOARD_PAGE)}
+                hoverable={false}
+                active={false}
+                onClick={() => navigate(DASHBOARD_PAGE)}
               >
                 Dashboard
               </BulmaNavbar.Item>

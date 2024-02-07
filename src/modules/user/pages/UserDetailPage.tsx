@@ -1,3 +1,9 @@
+import { UserDetail } from '@modules/user/components';
+
 export const UserDetailPage = () => {
-  return <div>User Detail</div>;
+  return (
+    <div>
+      <UserDetail />
+    </div>
+  );
 };

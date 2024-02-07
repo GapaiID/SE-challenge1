@@ -9,17 +9,19 @@ const parseError = (err: any) => {
   }
   if (err?.data) {
     err.data.forEach(({ field, message }: any) => {
-      response.fields[snakeToCamel(field)] = [message]
+      response.fields[snakeToCamel(field)] = [message];
     });
   }
 
-  console.log("response", response);
+  console.log('response', response);
 
   return response;
 };
 
 const snakeToCamel = (inputString: any) => {
-  return inputString.replace(/_([a-z])/g, (_: any, letter: any) => letter.toUpperCase());
-}
+  return inputString.replace(/_([a-z])/g, (_: any, letter: any) =>
+    letter.toUpperCase(),
+  );
+};
 
 export { parseError };

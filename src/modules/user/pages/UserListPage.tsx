@@ -1,3 +1,9 @@
+import { UserListWrapper } from '@modules/user/components';
+
 export const UserListPage = () => {
-  return <div>User List</div>;
+  return (
+    <div>
+      <UserListWrapper />
+    </div>
+  );
 };
