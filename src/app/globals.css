@@ -25,3 +25,8 @@
 .text-source-serif {
   font-family: var(--font-source-serif);
 }
+
+
+.text-jakarta-sans {
+  font-family: var(--font-jakarta-sans);
+}
