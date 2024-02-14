@@ -1,0 +1,21 @@
+{
+    "test": {
+      "scope": "typescript, typescriptreact",
+      "prefix": "test",
+      "body": [
+        "import React from 'react';",
+        "import { render, screen } from '@testing-library/react';",
+        "import ${1:Component} from './${1:Component}';",
+        "",
+        "describe('<${1:Component} />', () => {",
+        "  it('${1:Component} should render successfully', () => {",
+        "    const { container } = render(<${1:Component} />);",
+        "    expect(",
+        "       screen.getByTestId('${1:Component}'),",
+        "    ).toBeInTheDocument();",
+        "  });",
+        "});"
+      ],
+      "description": "Create Component test"
+    }
+  }
