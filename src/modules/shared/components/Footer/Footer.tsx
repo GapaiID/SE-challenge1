@@ -14,8 +14,8 @@ const Footer: React.FC<FooterProps> = ({ children }) => {
 			className="bg-[#F6F6F7] dark:bg-zinc-900 dark:border-zinc-950/50 border-[#E8E8EA] border-t-2"
 		>
 			<div className="w-9/12 mx-auto py-8 pt-16">
-				<div className="flex gap-10 mb-10">
-					<div className="w-[35%]">
+				<div className="flex md:flex-row flex-col gap-10 mb-10">
+					<div className="md:w-[35%] w-full">
 						<h3 className="text-lg text-jakarta-sans font-semibold leading-[18px] mb-5">
 							About
 						</h3>
@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({ children }) => {
 							</span>
 						</p>
 					</div>
-					<div className="w-[10%]">
+					<div className="md:w-[10%] w-full">
 						<h3 className="text-lg text-jakarta-sans font-semibold leading-[18px] mb-5">
 							Quick Link
 						</h3>
@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({ children }) => {
 							</li>
 						</ul>
 					</div>
-					<div className="w-[10%] mr-10">
+					<div className="md:w-[10%] w-full mr-10">
 						<h3 className="text-lg text-jakarta-sans font-semibold leading-[18px] mb-5">
 							Category
 						</h3>
@@ -109,7 +109,7 @@ const Footer: React.FC<FooterProps> = ({ children }) => {
 							</li>
 						</ul>
 					</div>
-					<div className="w-[40%] bg-white dark:bg-black/30 p-10 py-8 rounded-md">
+					<div className="md:w-[40%] w-full bg-white dark:bg-black/30 p-10 py-8 rounded-md">
 						<h3 className="text-lg text-center text-jakarta-sans font-semibold leading-[18px] pb-1">
 							Weekly Newsletter
 						</h3>
@@ -129,18 +129,18 @@ const Footer: React.FC<FooterProps> = ({ children }) => {
 						</button>
 					</div>
 				</div>
-				<div className="border-t-2 border-[#DCDDDF] py-4 flex w-full">
-					<div className="flex">
+				<div className="border-t-2 border-[#DCDDDF] py-4 flex w-full flex-col md:flex-row">
+					<div className="flex justify-center md:justify-start">
 						<Brand />
 					</div>
-					<div className="leading-8 flex justify-end float-right gap-4 w-full">
-						<Link href="#" className="hover:underline">
+					<div className="leading-8 flex justify-center md:justify-end float-right gap-6 md:gap-4 w-full">
+						<Link href="#" className="hover:underline text-sm md:text-[16px]">
 							Terms of Use
 						</Link>
-						<Link href="#" className="hover:underline">
+						<Link href="#" className="hover:underline text-sm md:text-[16px]">
 							Privacy Policy
 						</Link>
-						<Link href="#" className="hover:underline">
+						<Link href="#" className="hover:underline text-sm md:text-[16px]">
 							Cookie Policy
 						</Link>
 					</div>

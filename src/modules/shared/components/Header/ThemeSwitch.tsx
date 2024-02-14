@@ -4,7 +4,7 @@ import MoonIcon from '../Icons/MoonIcon';
 import SunIcon from '../Icons/SunIcon';
 import { useTheme } from 'next-themes';
 
-export default function Example() {
+export default function ThemeSwitch() {
 	const [enabled, setEnabled] = useState(false);
 	const { setTheme, resolvedTheme } = useTheme();
 

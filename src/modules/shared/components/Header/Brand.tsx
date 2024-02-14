@@ -1,12 +1,12 @@
 import React from 'react';
 
 type BrandProps = {
-	children?: React.ReactNode;
+	className?: string;
 };
 
-const Brand: React.FC<BrandProps> = ({ children }) => {
+const Brand: React.FC<BrandProps> = ({ className }) => {
 	return (
-		<div>
+		<div className={className}>
 			<div className="font-light text-xl">
 				Meta<span className="font-semibold">Blog</span>
 			</div>

@@ -14,7 +14,7 @@ const SingleCard: React.FC<SingleCardProps> = ({ children }) => {
 	return (
 		<div
 			data-testid="SingleCard"
-			className="p-3 border-[1px] border-[#E8E8EA] rounded-lg"
+			className="p-3 border-[1px] border-[#E8E8EA] dark:border-zinc-700/50 rounded-lg"
 		>
 			<div>
 				<Link href="/single-post">

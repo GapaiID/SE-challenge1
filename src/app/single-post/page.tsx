@@ -1,7 +1,6 @@
-import AuthorBioCard from '@/modules/author/AuthorBioCard';
-import PostCards from '@/modules/author/PostCards';
-import Footer from '@/modules/shared/components/Footer/Footer';
 import DesktopHeader from '@/modules/shared/components/Header/DesktopHeader';
+import PostContent from '@/modules/single-post/PostContent';
+import Footer from '@/modules/shared/components/Footer/Footer';
 import MobileHeader from '@/modules/shared/components/Header/MobileHeader';
 
 export default function Page() {
@@ -9,8 +8,7 @@ export default function Page() {
 		<>
 			<DesktopHeader />
 			<MobileHeader />
-			<AuthorBioCard />
-			<PostCards />
+			<PostContent />
 			<Footer />
 		</>
 	);

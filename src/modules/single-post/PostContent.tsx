@@ -12,7 +12,7 @@ const PostContent: React.FC<PostContentProps> = ({ children }) => {
 		'The Impact of Technology on the Workplace: How Technology is Changing';
 	return (
 		<div data-testid="PostContent">
-			<div className="post-content w-full max-w-[800px] mx-auto my-10">
+			<div className="post-content md:w-full md:max-w-[800px] md:mx-auto my-10 md:py-10 px-10 pb-10 pt-0 w-full">
 				<span className="bg-blue-600 text-white py-2 rounded-md text-[14px] px-3">
 					Technology
 				</span>
