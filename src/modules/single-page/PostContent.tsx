@@ -1,14 +1,17 @@
-import Header from '@/modules/shared/components/Header/Header';
-import ProfileIcon from '@/modules/shared/components/Icons/ProfileIcon';
-import PostImage from '../../../public/post-image.jpg';
+import React from 'react';
+import ProfileIcon from '../shared/components/Icons/ProfileIcon';
 import Image from 'next/image';
+import PostImage from '../../../public/post-image.jpg';
 
-export default function Page() {
+type PostContentProps = {
+	children?: React.ReactNode;
+};
+
+const PostContent: React.FC<PostContentProps> = ({ children }) => {
 	const title =
 		'The Impact of Technology on the Workplace: How Technology is Changing';
 	return (
-		<>
-			<Header />
+		<div data-testid="PostContent">
 			<div className="post-content w-full max-w-[800px] mx-auto my-10">
 				<span className="bg-blue-600 text-white py-2 rounded-md text-[14px] px-3">
 					Technology
@@ -50,6 +53,8 @@ export default function Page() {
 					</p>
 				</div>
 			</div>
-		</>
+		</div>
 	);
-}
+};
+
+export default PostContent;
