@@ -22,14 +22,13 @@ const Footer: React.FC<FooterProps> = ({ children }) => {
 						<p className="text-[16px] text-jakarta-sans font-thin leading-6">
 							Lorem ipsum dolor sit amet, <br />
 							consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-							labore et dolore magna aliqua. Ut enim ad minim veniam
-							<span className="pt-5">
-								<span>
+							labore et dolore magna aliqua. Ut enim ad minim veniam <br />
+							<span className="pt-5 block">
+								<span className="block">
 									<strong className="font-semibold">Email:</strong>{' '}
 									info@jstemplate.net
 								</span>
-								<br />
-								<span>
+								<span className="block">
 									<strong className="font-semibold">Phone:</strong> 880 123 456
 									789
 								</span>
