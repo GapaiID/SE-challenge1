@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Work_Sans, Source_Serif_4 } from 'next/font/google';
+import Providers from '@/modules/shared/context/Providers';
 import './globals.css';
 
 const workSans = Work_Sans({ subsets: ['latin'] });
@@ -11,8 +12,10 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
-			<body className={workSans.className}>{children}</body>
+		<html lang="en" suppressHydrationWarning>
+			<body className={`${workSans.className} bg-white dark:bg-zinc-900`}>
+				<Providers>{children}</Providers>
+			</body>
 		</html>
 	);
 }

@@ -1,4 +1,4 @@
-import Homepage from '@/components/homepage/Homepage';
+import Homepage from '@/modules/homepage/Homepage';
 
 const Page: React.FC = () => {
 	return (
