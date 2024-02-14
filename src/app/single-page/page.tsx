@@ -1,4 +1,4 @@
-import Header from '@/modules/shared/Header/Header';
+import Header from '@/components/shared/Header/Header';
 
 export default function Page() {
 	return (
