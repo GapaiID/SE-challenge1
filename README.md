@@ -1,59 +1,36 @@
-# React Test: Simple Personal Blog
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-**Challenge**: This test asks the candidate to build a single-page application (SPA) for a simple personal blog. The goal is to test their understanding of JavaScript, React, CSS frameworks (specifically responsiveness/mobile-friendliness), Git version control, and their ability to write clean, efficient, and maintainable code.
+## Getting Started
 
-The [following Figma layout needs to be developed](https://www.figma.com/file/Lpk703811Gv3PNmn2ydlGP/Free-Blog-Template--%7C-Modern-%26-Creative-design-(Community)?type=design&mode=design).
+First, run the development server:
 
-It's important to say that it is just a prototype! We would also like to see your ability to propose improvements, features and new contributions to the product's UI 😄! Use the layout only as reference!
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Scenario:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You are tasked with building the frontend for a simple personal blog. User can read a blog and write a blog. The web-app should allow for the following functionalities:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- Viewing listed blog (you can create your own data)
-- Post creation, editing, and deletion
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Tech Requirements
+## Learn More
 
-- Use React JS as the primary framework.
-- Choose a modern CSS framework like Material UI or Chakra UI for responsive design and mobile-friendliness.
-- Utilize Git for version control throughout the development process.
-- Focus on writing clean, well-organized, and commented code.
-- Follow best practices for unit testing and code documentation.
+To learn more about Next.js, take a look at the following resources:
 
-## Assessment Criteria:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Functionality:
-- Completeness and accuracy of implemented features.
-- User-friendliness and intuitive UX/UI design.
-### Technical Depth:
-- Use of appropriate React patterns and components.
-- Effective state management and data handling.
-- Implementation of responsive design and mobile-friendliness.
-- Utilization of Git for version control and collaboration.
-### Code Quality:
-- Readability, maintainability, and clarity of code.
-- Effective use of comments and documentation.
-- Adherence to best practices for code structure and indentation.
-### Bonus Points:
-- Create your own mock-up API from the other [challenge](https://github.com/GapaiID/SE-challenge2) to fetch the data.
-- Implementation of mobile responsive design.
-- Implementation of additional features beyond the basic requirements.
-- Creative and innovative solutions to technical challenges.
-- Deploy your work to a cloud platform (e.g., Heroku, AWS, docker) and share your link through the email.
-- *FEEL FREE* to add any functionality or feature that you might see can benefit the app
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Instructions
+## Deploy on Vercel
 
-- Fork this repo
-- The challenge is on!
-- Build a performant, clean and well-structured solution
-- Commit early and often. We want to be able to check your progress
-- Make the app public. Deploy it using the service of your choice (to gain bonus point!)
-- Write the instruction on how to run the app by rewriting this README.md
-- Don't forget to write your name, email, and phone number on this file
-- Create a pull request (ref: https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
-- Please submit your working solution before 7th Feb 2024, 11.00 AM (Submitting before that is always a plus point)
-- Be sure to notify us when it is submitted by sending us email through faizal@gapai.id with title format **[SE - Submission] - yourname** and send me the related link.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Happy Hacking! 🤘
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

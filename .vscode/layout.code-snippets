@@ -1,0 +1,24 @@
+{
+  "layout": {
+    "prefix": "layout",
+    "body": [
+      "import MainFooter from '@/modules/shared/components/main-footer';",
+      "import MainHeader from '@/modules/shared/components/main-header';",
+      "",
+      "export default function Layout({",
+      "  children,",
+      "}: {",
+      "  children: React.ReactNode;",
+      "}) {",
+      "  return (",
+      "    <>",
+      "      <MainHeader />",
+      "      {children}",
+      "      <MainFooter />",
+      "    </>",
+      "  );",
+      "}",
+      ""
+    ]
+  }
+}
