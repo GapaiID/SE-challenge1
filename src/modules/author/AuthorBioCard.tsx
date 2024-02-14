@@ -11,7 +11,7 @@ type AuthorBioCardProps = {
 const AuthorBioCard: React.FC<AuthorBioCardProps> = ({ children }) => {
 	return (
 		<div data-testid="AuthorBioCard">
-			<div className="bg-[#F6F6F7] dark:bg-zinc-900 w-9/12 mx-auto py-10 my-10 rounded-md">
+			<div className="bg-[#F6F6F7] dark:bg-zinc-600/50 w-9/12 mx-auto py-10 my-10 rounded-md">
 				<div className="flex justify-center items-center">
 					<div>
 						<Image
