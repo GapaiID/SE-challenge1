@@ -33,7 +33,7 @@ const SingleCard: React.FC<SingleCardProps> = ({ children }) => {
 				</div>
 				<div>
 					<Link href="/single-post">
-						<h1 className="text-zinc-900 dark:text-white py-3 text-xl font-semibold">
+						<h1 className="text-zinc-900 dark:text-white py-3 text-xl font-semibold hover:underline">
 							{title}
 						</h1>
 					</Link>
@@ -41,7 +41,7 @@ const SingleCard: React.FC<SingleCardProps> = ({ children }) => {
 				<div className="flex leading-7">
 					<ProfileIcon color="#97989f" height={30} width={30} />
 					<span className="ml-2 text-gray-500 dark:text-white text-[16px]">
-						Tracey Wilson
+						Jonathan Doe
 					</span>
 					<span className="ml-5 text-gray-500 dark:text-white text-[16px]">
 						August 20, 2022

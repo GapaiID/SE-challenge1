@@ -1,6 +1,5 @@
 import AuthorBioCard from '@/modules/author/AuthorBioCard';
 import PostCards from '@/modules/author/PostCards';
-import PostCard from '@/modules/author/SingleCard';
 import Footer from '@/modules/shared/components/Footer/Footer';
 import Header from '@/modules/shared/components/Header/Header';
 

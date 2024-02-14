@@ -1,9 +1,9 @@
-import Homepage from '@/modules/homepage/Homepage';
+import Author from '@/app/author/page';
 
 const Page: React.FC = () => {
 	return (
 		<>
-			<Homepage />
+			<Author />
 		</>
 	);
 };
